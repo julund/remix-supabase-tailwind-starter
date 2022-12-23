@@ -658,6 +658,11 @@ abbr{
   padding: 1.5rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -665,6 +670,30 @@ abbr{
 .text-base-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-base-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-primary-500{
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.text-primary-700{
+  --tw-text-opacity: 1;
+  color: rgb(3 105 161 / var(--tw-text-opacity));
+}
+
+.text-primary-600{
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .transition-all{
@@ -675,4 +704,8 @@ abbr{
 
 .duration-500{
   transition-duration: 500ms;
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline;
 }
