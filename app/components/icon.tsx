@@ -16,3 +16,5 @@ const defaultIconProps: IconProps = {
 };
 
 export const IconArrowBack = ({ ...props }: IconProps) => icon.TbArrowBack({ ...defaultIconProps, ...props });
+export const IconAbacus = ({ ...props }: IconProps) => icon.TbAbacus({ ...defaultIconProps, ...props });
+export const IconApiApp = ({ ...props }: IconProps) => icon.TbApiApp({ ...defaultIconProps, ...props });

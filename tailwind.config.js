@@ -17,6 +17,7 @@ module.exports = {
       colors: {
         primary: colors.sky,
         base: colors.gray,
+        error: colors.red,
       },
     },
   },

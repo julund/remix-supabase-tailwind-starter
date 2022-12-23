@@ -9,7 +9,7 @@
   }
   html,
   body {
-    @apply h-full min-w-full font-sans font-regular;
+    @apply h-full min-w-full font-sans font-regular bg-base-50 text-base-900;
   }
   input {
     @apply px-4 py-2 font-sans rounded-sm bg-primary-50 text-primary-900;
@@ -29,7 +29,10 @@
 }
 
 @layer components {
-  .error {
-    @apply text-red-500;
+  .navlink {
+    @apply text-primary-600 hover:underline flex gap-1 items-center;
+  }
+  .navlink.active {
+    @apply text-base-500;
   }
 }
