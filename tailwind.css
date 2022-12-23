@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;800&family=Inter:wght@400;600;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    overflow: overlay;
+  }
+  html,
+  body {
+    @apply h-full min-w-full font-sans font-regular;
+  }
+  input {
+    @apply px-4 py-2 font-sans rounded-sm bg-primary-50 text-primary-900;
+  }
+  h1 {
+    @apply py-2 text-4xl font-black font-title;
+  }
+  h2 {
+    @apply py-2 text-2xl font-semibold font-title;
+  }
+  b {
+    @apply font-semibold;
+  }
+  abbr {
+    @apply underline-offset-4 underline decoration-dotted decoration-base-400;
+  }
+}
+
+@layer components {
+  .error {
+    @apply text-red-500;
+  }
+}
