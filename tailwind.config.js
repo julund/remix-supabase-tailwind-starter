@@ -6,18 +6,21 @@ module.exports = {
     fontFamily: {
       "title": ["Inter", "sans-serif"],
       "sans": ["Inter", "sans-serif"],
-      "mono": ["Inconsolata", "monospace"],
+      "mono": ["Source Code Pro", "monospace"],
     },
     fontWeight: {
       "regular": "400",
+      "medium": "500",
       "semibold": "600",
       "black": "800",
     },
     extend: {
       colors: {
-        primary: colors.sky,
         base: colors.gray,
-        error: colors.red,
+        primary: colors.sky,
+        success: colors.green,
+        warning: colors.amber,
+        error: colors.amber,
       },
     },
   },

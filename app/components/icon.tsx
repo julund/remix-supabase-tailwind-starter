@@ -15,6 +15,8 @@ const defaultIconProps: IconProps = {
     size: 20, stroke: "currentColor", fill: "none", strokeWidth: 1.75, viewBox: "0 0 24 24", strokeLinecap: "round", strokeLinejoin: "round"
 };
 
+export const IconX = ({ ...props }: IconProps) => icon.TbX({ ...defaultIconProps, ...props });
+export const IconMenu = ({ ...props }: IconProps) => icon.TbMenu({ ...defaultIconProps, ...props });
 export const IconArrowBack = ({ ...props }: IconProps) => icon.TbArrowBack({ ...defaultIconProps, ...props });
-export const IconAbacus = ({ ...props }: IconProps) => icon.TbAbacus({ ...defaultIconProps, ...props });
-export const IconApiApp = ({ ...props }: IconProps) => icon.TbApiApp({ ...defaultIconProps, ...props });
+export const IconInfo = ({ ...props }: IconProps) => icon.TbInfoCircle({ ...defaultIconProps, ...props });
+export const IconQuestionMark = ({ ...props }: IconProps) => icon.TbQuestionMark({ ...defaultIconProps, ...props });

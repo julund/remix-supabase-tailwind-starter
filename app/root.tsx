@@ -11,6 +11,7 @@ import { useCatch } from "@remix-run/react";
 import Layout from "./layout";
 import NotFound from "./layout/notFound";
 import style from "./style.css";
+import { appName } from "./util/const";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: style },
@@ -18,7 +19,6 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Remix Supabase Tailwind Starter",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -46,7 +46,7 @@ export function CatchBoundary() {
   return (
     <html lang="en">
       <head>
-        <title>Oops!</title>
+        <title>{`Not Found - ${appName}`}</title>
         <Meta />
         <Links />
       </head>
