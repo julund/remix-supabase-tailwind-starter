@@ -20,7 +20,8 @@
   h2 {
     @apply my-2 text-2xl font-semibold font-title text-base-700;
   }
-  p, pre {
+  p,
+  pre {
     @apply mb-4;
   }
   b {
@@ -29,35 +30,39 @@
   abbr {
     @apply underline-offset-4 underline decoration-dotted decoration-base-400;
   }
-  a {
-    @apply text-primary-600 hover:underline flex gap-1 items-center;
-  }
-  a.active {
-    @apply text-base-500;
-  }
 }
 
 @layer components {
+  .navlink {
+    @apply text-primary-700 flex gap-1 items-center transition duration-200;
+  }
+  .navlink.active {
+    @apply text-base-600;
+  }
+  .navlink:hover {
+    transform: translateY(-2px);
+    box-shadow: inset 0 -1.5px;
+  }
   .button {
     @apply flex gap-2 items-center px-4 py-2 rounded-sm no-underline hover:no-underline select-none font-medium;
   }
   .button-base {
-    @apply bg-base-200 hover:bg-base-300 text-base-600;
+    @apply bg-base-200 hover:bg-base-300 text-base-700;
   }
   .button-ghost {
-    @apply bg-transparent hover:bg-base-300/50 text-base-600;
+    @apply bg-transparent hover:bg-base-300/50 text-base-700;
   }
   .button-primary {
-    @apply bg-primary-200 hover:bg-primary-300 text-primary-600;
+    @apply bg-primary-200 hover:bg-primary-300 text-primary-800;
   }
   .button-success {
-    @apply bg-success-200 hover:bg-success-300 text-success-600;
+    @apply bg-success-200 hover:bg-success-300 text-success-700;
   }
   .button-warning {
-    @apply bg-warning-200 hover:bg-warning-300 text-warning-600;
+    @apply bg-warning-200 hover:bg-warning-300 text-warning-700;
   }
   .button-error {
-    @apply bg-error-200 hover:bg-error-300 text-error-600;
+    @apply bg-error-200 hover:bg-error-300 text-error-700;
   }
   @keyframes fadeInShake {
     0% {
@@ -79,7 +84,8 @@
     }
   }
   .animate-fadeInShake {
-    animation: fadeInShake 0.3s;
+    animation: fadeInShake;
+    animation-duration: 350ms;
   }
   @keyframes fadeInDown {
     from {

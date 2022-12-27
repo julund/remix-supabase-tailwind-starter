@@ -20,6 +20,7 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1",
+  description: "Remix, Supabase, Tailwind Starter Project",
 });
 
 export default function App() {
