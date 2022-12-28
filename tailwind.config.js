@@ -4,8 +4,8 @@ module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
     fontFamily: {
-      "title": ["Inter", "sans-serif"],
-      "sans": ["Inter", "sans-serif"],
+      "serif": ["Pridi", "sans-serif"],
+      "sans": ["Hanken Grotesk", "sans-serif"],
       "mono": ["Source Code Pro", "monospace"],
     },
     fontWeight: {
@@ -25,4 +25,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

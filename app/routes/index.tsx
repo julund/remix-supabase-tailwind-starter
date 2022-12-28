@@ -13,7 +13,7 @@ export default function Index() {
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam similique quam atque earum maxime blanditiis nam unde optio autem quas deserunt enim velit ab corrupti sed, expedita mollitia!
         </p>
-        <div className="flex gap-4 text-base">
+        <div className="flex gap-4 text-base flex-wrap">
           <Link to="/" className="button button-primary">Lorem</Link>
           <Link to="/" className="button button-base">Ipsum</Link>
           <Link to="/" className="button button-ghost">Dolor</Link>

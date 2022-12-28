@@ -4,5 +4,5 @@ export default function Main({ children }: { children: React.ReactNode }) {
         <main className="p-6 bg-white grow">
             {children}
         </main>
-    )
+    );
 }

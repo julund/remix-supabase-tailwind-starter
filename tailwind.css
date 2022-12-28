@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;800&family=Inter:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;800&family=Hanken+Grotesk:wght@400;500;600;800&family=Pridi:wght@400;500;600;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,16 +9,16 @@
   }
   html,
   body {
-    @apply h-full min-w-full font-sans font-regular bg-base-50 text-base-900;
+    @apply h-full min-w-full font-sans font-regular text-base-800 tracking-wide;
   }
   input {
     @apply px-4 py-2 font-sans rounded-sm bg-primary-50 text-primary-900;
   }
   h1 {
-    @apply my-2 text-4xl font-black font-title text-base-700;
+    @apply my-2 text-4xl font-medium font-serif text-base-600 tracking-wide;
   }
   h2 {
-    @apply my-2 text-2xl font-semibold font-title text-base-700;
+    @apply my-2 text-2xl font-medium font-serif text-base-600 tracking-wide;
   }
   p,
   pre {
