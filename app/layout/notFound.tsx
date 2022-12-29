@@ -4,7 +4,7 @@ import { IconArrowBack } from "~/components/icon";
 export default function NotFound({ response }: { response: ThrownResponse }) {
     const { pathname } = useLocation();
     return (
-        <div className="p-6 max-w-2xl mx-auto rounded-sm grow animate-fadeInShake">
+        <div className="py-6 max-w-2xl mx-auto rounded-sm grow animate-fadeInShake">
             <h1 className="text-error-600">{response.statusText}</h1>
             <p>We were unable to find the page <b>{pathname}</b>.</p>
             <p>

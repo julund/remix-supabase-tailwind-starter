@@ -24,13 +24,13 @@ export default function Nav({ children }: { children: React.ReactNode }) {
     };
 
     return (
-        <nav ref={parentRef} className={clsx("z-0 flex grow justify-end items-start relative p-2", showDropDown ? "" : "")}>
+        <nav ref={parentRef} className={clsx("z-0 flex grow justify-end items-start relative py-2", showDropDown ? "" : "")}>
             {showDropDown &&
                 <button ref={buttonRef} className="p-1" aria-label="toggle" onClick={toggle}>
                     {expanded ? <IconX /> : <IconMenu />}
                 </button>
             }
-            {showDropDown && expanded && <div ref={dropDownRef} onClick={dropDownClick} aria-labelledby="toggle" className="flex flex-col gap-4 absolute top-10 right-0 bg-base-300 rounded-sm py-4 px-6 min-w-max">
+            {showDropDown && expanded && <div ref={dropDownRef} onClick={dropDownClick} aria-labelledby="toggle" className="flex flex-col gap-4 absolute top-10 right-0 border-base-200 border rounded-sm bg-base-50 py-4 px-6 min-w-max">
                 {children}
             </div>
             }
