@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;800&family=Hanken+Grotesk:wght@400;500;600;800&family=Pridi:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;800&family=Hanken+Grotesk:wght@400;500;600;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,22 +7,30 @@
   body {
     overflow: overlay;
   }
+  ::selection {
+    @apply text-primary-50 bg-primary-600;
+  }
   html,
   body {
-    @apply h-full min-w-full font-sans font-regular text-base-800 tracking-wide;
+    @apply h-full min-w-full font-body font-regular text-base-800 tracking-wide;
   }
   input {
-    @apply px-4 py-2 font-sans rounded-sm bg-primary-50 text-primary-900;
+    @apply px-4 py-2 font-body rounded-sm bg-primary-50 text-primary-900;
   }
   h1 {
-    @apply my-2 text-4xl font-medium font-serif text-base-600 tracking-wide;
+    @apply my-2 text-4xl font-semibold font-title text-base-600 tracking-wide;
   }
   h2 {
-    @apply my-2 text-2xl font-medium font-serif text-base-600 tracking-wide;
+    @apply my-2 text-2xl font-semibold font-title text-base-600 tracking-wide;
   }
-  p,
-  pre {
+  p {
     @apply mb-4;
+  }
+  code, pre {
+    @apply font-mono font-medium;
+  }
+  code {
+    @apply opacity-80;
   }
   b {
     @apply font-medium;
@@ -34,10 +42,10 @@
 
 @layer components {
   .navlink {
-    @apply text-primary-700 flex gap-1 items-center transition duration-200;
+    @apply text-primary-700 text-lg flex gap-1 items-center transition duration-200;
   }
   .navlink.active {
-    @apply text-base-600;
+    @apply text-base-600 opacity-75;
   }
   .navlink:hover {
     transform: translateY(-2px);

@@ -17,6 +17,12 @@ export default function Nav({ children }: { children: React.ReactNode }) {
         if (showDropDown && expanded && !buttonClicked) toggle(false);
     });
 
+    const dropDownClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent> & { target: HTMLDivElement }) => {
+        const isHrefClick = !!(event.target.tagName === "A" && event.target.getAttribute("href"));
+        const isHrefParentClick = event.target.parentElement && !!(event.target.parentElement.tagName === "A" && event.target.parentElement.getAttribute("href"));
+        if ((event.target !== dropDownRef.current) && (isHrefClick || isHrefParentClick)) toggle();
+    };
+
     return (
         <nav ref={parentRef} className={clsx("z-0 flex grow justify-end items-start relative p-2", showDropDown ? "" : "")}>
             {showDropDown &&
@@ -24,7 +30,7 @@ export default function Nav({ children }: { children: React.ReactNode }) {
                     {expanded ? <IconX /> : <IconMenu />}
                 </button>
             }
-            {showDropDown && expanded && <div ref={dropDownRef} aria-labelledby="toggle" className="flex flex-col gap-4 absolute top-10 right-0 bg-base-100 rounded-sm py-4 px-6">
+            {showDropDown && expanded && <div ref={dropDownRef} onClick={dropDownClick} aria-labelledby="toggle" className="flex flex-col gap-4 absolute top-10 right-0 bg-base-300 rounded-sm py-4 px-6 min-w-max">
                 {children}
             </div>
             }

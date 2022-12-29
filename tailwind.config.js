@@ -4,8 +4,8 @@ module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
     fontFamily: {
-      "serif": ["Pridi", "sans-serif"],
-      "sans": ["Hanken Grotesk", "sans-serif"],
+      "title": ["Hanken Grotesk", "serif"],
+      "body": ["Hanken Grotesk", "sans-serif"],
       "mono": ["Source Code Pro", "monospace"],
     },
     fontWeight: {
@@ -20,7 +20,7 @@ module.exports = {
         primary: colors.sky,
         success: colors.green,
         warning: colors.amber,
-        error: colors.amber,
+        error: colors.rose,
       },
     },
   },
