@@ -10,7 +10,7 @@ import {
 import { useCatch } from "@remix-run/react";
 import Layout from "./layout";
 import NotFound from "./layout/notFound";
-import style from "./style.css";
+import style from "./root.css";
 import { appName } from "./util/const";
 
 export const links: LinksFunction = () => [
