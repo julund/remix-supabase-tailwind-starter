@@ -10,7 +10,7 @@ export default function Nav({ children }: { children: React.ReactNode }) {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const dropDownRef = useRef<HTMLDivElement>(null);
     const [expanded, toggle] = useToggle(false);
-    const showDropDown = !!parentWidth && (parentWidth <= innerWidth);
+    const showDropDown = parentWidth <= innerWidth;
 
     useClickAway(dropDownRef, (event: Event & { target: HTMLButtonElement }) => {
         const buttonClicked = event.target === buttonRef.current;
@@ -30,9 +30,10 @@ export default function Nav({ children }: { children: React.ReactNode }) {
                     {expanded ? <IconX /> : <IconMenu />}
                 </button>
             }
-            {showDropDown && expanded && <div ref={dropDownRef} onClick={dropDownClick} aria-labelledby="toggle" className="flex flex-col gap-4 absolute top-10 right-0 border-base-200 border rounded-sm bg-base-50 py-4 px-6 min-w-max">
-                {children}
-            </div>
+            {showDropDown && expanded &&
+                <div ref={dropDownRef} onClick={dropDownClick} aria-labelledby="toggle" className="flex flex-col gap-4 absolute top-10 right-0 border-base-200 border rounded-sm bg-base-50 py-4 px-6 min-w-max">
+                    {children}
+                </div>
             }
             {!showDropDown &&
                 <div ref={innerRef} className="flex gap-4">
