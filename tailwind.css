@@ -42,12 +42,12 @@
 
 @layer components {
   .navlink {
-    @apply text-primary-700 text-lg flex gap-1 items-center transition duration-200;
+    @apply text-primary-700 text-lg transition duration-200;
   }
   .navlink.active {
     @apply text-base-600 opacity-75;
   }
-  .navlink:hover {
+  .navlink:hover:not(.active) {
     transform: translateY(-2px);
     box-shadow: inset 0 -1.5px;
   }
