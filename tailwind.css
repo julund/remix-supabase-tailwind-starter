@@ -92,8 +92,7 @@
     }
   }
   .animate-fadeInShake {
-    animation: fadeInShake;
-    animation-duration: 350ms;
+    animation: fadeInShake 350ms;
   }
   @keyframes fadeInDown {
     from {
@@ -106,7 +105,41 @@
     }
   }
   .animate-fadeInDown {
-    animation-name: fadeInDown;
-    animation-duration: 500ms;
+    animation: fadeInDown 350ms;
+  }
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+  }
+  .animate-fadeOutUp {
+    animation: fadeOutUp 350ms;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 350ms;
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .animate-fadeOut {
+    animation: fadeOut 350ms;
   }
 }
