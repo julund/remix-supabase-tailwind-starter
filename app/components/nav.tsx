@@ -22,7 +22,10 @@ export default function Nav({ children }: { children: React.ReactNode }) {
     return (
         <nav className="z-0 flex grow justify-end items-start relative py-2">
             <button ref={buttonRef} className="p-1 rounded-sm hover:bg-base-100 focus:bg-base-100 md:hidden" aria-label="toggle" onClick={toggle}>
-                {expanded ? <IconX className="text-base-800 pointer-events-none" /> : <IconMenu className="text-base-800 pointer-events-none" />}
+                {expanded ?
+                    <IconX className="text-base-800 pointer-events-none" /> :
+                    <IconMenu className="text-base-800 pointer-events-none" />
+                }
             </button>
             <div
                 ref={dropDownRef}
