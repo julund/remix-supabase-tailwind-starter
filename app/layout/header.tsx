@@ -3,7 +3,7 @@ import Nav from "~/components/nav2";
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 flex-grow-0 p-6 border-b-2 border-base-100 bg-base-50/50 ">
+        <header className="sticky top-0 backdrop-blur-md z-50 flex-grow-0 p-6 border-b-2 border-base-100 bg-base-50/50 ">
             <div className="max-w-2xl mx-auto flex gap-4">
                 <NavLink className="text-lg uppercase font-title min-w-max font-black text-base-600 py-2 shrink" to="/">
                     Remix Starter
