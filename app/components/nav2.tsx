@@ -21,7 +21,7 @@ export default function Nav({ children }: { children: React.ReactNode; }) {
     });
 
     return (
-        <nav ref={ref} className={clsx("py-2 grow relative")}>
+        <nav ref={ref} className={clsx("py-2 grow relative", !showDropDown && "overflow-clip")}>
             <button
                 ref={buttonRef}
                 className={clsx(
