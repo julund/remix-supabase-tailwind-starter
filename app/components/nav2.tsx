@@ -9,7 +9,7 @@ export default function Nav({ children }: { children: React.ReactNode; }) {
     const [innerRef, { width: innerWidth }] = useMeasure<HTMLDivElement>();
     const buttonRef = useRef<HTMLButtonElement>(null);
     const dropDownRef = useRef<HTMLDivElement>(null);
-    const showDropDown = width <= innerWidth;
+    const showDropDown = width <= innerWidth && (width > 0 && innerWidth > 0);
     const [expanded, toggle] = useToggle(false);
 
     useClickAway(buttonRef, (event: Event & { target: HTMLElement }) => {
@@ -21,7 +21,7 @@ export default function Nav({ children }: { children: React.ReactNode; }) {
     });
 
     return (
-        <nav ref={ref} className={clsx("py-2 grow relative", !showDropDown && "overflow-clip")}>
+        <nav ref={ref} className={clsx("py-2 grow relative", (!showDropDown && !expanded) && "overflow-x-clip")}>
             <button
                 ref={buttonRef}
                 className={clsx(
