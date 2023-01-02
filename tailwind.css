@@ -42,7 +42,7 @@
 
 @layer components {
   .navlink {
-    @apply text-primary-700 text-lg transition duration-200;
+    @apply text-primary-700 text-lg transition duration-200 mx-2;
   }
   .navlink.active {
     @apply text-base-600 opacity-75;
